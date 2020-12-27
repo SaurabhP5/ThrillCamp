@@ -1,0 +1,27 @@
+<%- include("../partials/header.ejs")%>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+               <div class="panel panel-primary">
+                   <div class="panel-heading">
+                       <h1>Edit Comment</h1>   
+                   </div>
+                   <div class="panel-body">
+                        <form action="/campgrounds/<%= campground_id%>/comments/<%= comment._id %>?_method=PUT" method="POST">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="comment[text]" value="<%= comment.text %>">
+                            </div>
+                        </form>
+                   </div>
+                   <div class="panel-footer">
+                       <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                   </div>
+                   
+               </div>
+           </div>     
+       </div>
+    </div>
+    
+
+<%- include("../partials/footer.ejs")%>

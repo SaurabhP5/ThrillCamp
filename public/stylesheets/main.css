@@ -1,0 +1,72 @@
+body{
+    margin-top: 60px;
+}
+
+.thumbnail img{
+    width: 100%;
+}
+
+.thumbnail{
+    padding: 0;
+}
+
+.thumbnail .caption-full{
+    padding: 9px;
+}
+
+#delete-form{
+    display: inline;
+}
+
+/*%%%%%%%%%%%%%%%Button Effect%%%%%%%%%%%%%%%%%%%%%%%%*/
+.button-effect{
+    font-size: calc(10px + (18 - 14) * ((100vw - 300px) / (1600 - 300)));
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    padding-top: 7px;
+    border-radius: 40px;
+    align-content: center;
+    font-size: 20px;
+    transform: translate(-50%,-50%);
+    background-size: 400%;
+    z-index: 1;
+}
+.button-effect:hover{
+    animation: animate 8s linear infinite;
+}
+@keyframes animate{
+    0%
+    {
+        background-position: 0%;
+    }
+    100%
+    {
+        background-position: 400%;
+    }
+}
+.button-effect:before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    background-size: 400%;
+    border-radius: 40px;
+    opacity: 0;
+    transition: 0.5s;
+    filter: blur(2px);
+}
+.button-effect:hover:before{
+    filter: blur(2px);
+    opacity: 1;
+    animation: animate 8s linear infinite;
+}
